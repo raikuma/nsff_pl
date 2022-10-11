@@ -8,7 +8,7 @@ python train.py \
   --num_epochs 200 --batch_size 512 \
   --optimizer adam --lr 5e-4 --lr_scheduler cosine \
   --exp_name exp \
-  --num_gpus 3 &&
+  --num_gpus $NUM_GPUS &&
 python eval.py \
   --dataset_name monocular --root_dir $ROOT_DIR \
   --N_samples 128 --N_importance 0 --img_wh 480 270 --start_end 0 12 \

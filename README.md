@@ -10,7 +10,7 @@ docker run -it -v `pwd`:/workspace --ipc=host --gpus=all --name wocho_gpuall_nsf
 cd workspace
 export ROOT_DIR=<root_dir>
 # copy train files to $ROOT_DIR
-python preprocess $ROOT_DIR
+python preprocess.py --root_dir $ROOT_DIR
 # sh run.sh <num_gpu>
 sh run.sh 3
 # copy result files to local
