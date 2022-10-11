@@ -1,5 +1,23 @@
 # nsff_pl
 
+## just only for me
+
+```
+git clone --recursive https://github.com/raikuma/nsff_pl.git
+cd nsff_pl
+sh setup.sh
+docker run -it -v `pwd`:/workspace --ipc=host --gpus=all --name wocho_gpuall_nsff_pl ciplab/wocho_nsff_pl:latest
+cd workspace
+export ROOT_DIR=<root_dir>
+# copy train files to $ROOT_DIR
+python preprocess $ROOT_DIR
+# sh run.sh <num_gpu>
+sh run.sh 3
+# copy result files to local
+```
+
+---
+
 Neural Scene Flow Fields using pytorch-lightning. This repo reimplements the [NSFF](https://github.com/zhengqili/Neural-Scene-Flow-Fields) idea, but modifies several operations based on observation of NSFF results and discussions with the authors. For discussion details, please see the [issues](https://github.com/zhengqili/Neural-Scene-Flow-Fields/issues?q=is%3Aissue+author%3Akwea123) of the original repo. The code is based on my previous [implementation](https://github.com/kwea123/nerf_pl).
 
 The main modifications are the followings:

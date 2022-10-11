@@ -203,7 +203,8 @@ if __name__ == "__main__":
                 results_tp1 = f(models, embeddings, sample['rays'].to(device), ts+1,
                                 dataset.N_frames-1, args.N_samples, args.N_importance,
                                 args.chunk, **kwargs)
-                for dt in np.linspace(0, 1, interp+1)[:-1]: # interp images
+                # for dt in np.linspace(0, 1, interp+1)[:-1]: # interp images
+                for dt in np.linspace(0, 1, interp+1): # interp images include frame
                     if dt == 0:
                         img_pred = results['rgb_fine'].view(h, w, 3)
                         depth_pred = results['depth_fine']

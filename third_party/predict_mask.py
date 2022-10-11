@@ -25,8 +25,11 @@ COCO_INSTANCE_CATEGORY_NAMES = [
     'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
 
 DETECTION_THR = 0.05
+# DYNAMIC_CATEGORIES = [
+#     'person', 'book', 'remote', 'parking meter',
+# ]
 DYNAMIC_CATEGORIES = [
-    'person', 'book', 'remote', 'parking meter',
+    'person'
 ]
 
 
