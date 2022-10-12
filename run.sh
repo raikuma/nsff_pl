@@ -14,5 +14,5 @@ python eval.py \
   --N_samples 128 --N_importance 0 --img_wh 480 270 --start_end 0 12 \
   --encode_t --output_transient \
   --split test_fixview0_interp0 --video_format gif --fps 5 \
-  --ckpt_path /workspace/ckpts/exp/epoch=199.ckpt --scene_name Balloon1_reconstruction \
+  --ckpt_path /workspace/ckpts/exp/epoch=199.ckpt --scene_name Output_reconstruction \
   --use_viewdir
